@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "points",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 333, "notes": "I used to live at this house last year!" }, "geometry": { "type": "Point", "coordinates": [ -79.055667243488756, 35.91000130763328 ] } },
+{ "type": "Feature", "properties": { "id": 666, "notes": "I lived here the first Summer I transferred to UNC" }, "geometry": { "type": "Point", "coordinates": [ -79.04842912448737, 35.912251865295346 ] } },
+{ "type": "Feature", "properties": { "id": 999, "notes": "I have some COMP SCI classes at this building" }, "geometry": { "type": "Point", "coordinates": [ -79.050449793650643, 35.90745187908604 ] } },
+{ "type": "Feature", "properties": { "id": 1212, "notes": "this is the planetarium and I once used the telescope here" }, "geometry": { "type": "Point", "coordinates": [ -79.050465698894399, 35.913726042550444 ] } },
+{ "type": "Feature", "properties": { "id": 1515, "notes": "One of my favorite places to walk on-campus, Coker Arboretum\\" }, "geometry": { "type": "Point", "coordinates": [ -79.048826864382349, 35.913551578046558 ] } }
+]
+}
