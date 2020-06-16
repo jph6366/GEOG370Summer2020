@@ -23,19 +23,30 @@
     <script>
         var map = L.map('mapid').setView([35.91, -79.05], 14);
 
-      var OSM = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map)
+      var OSM = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {});
 
-      var georef = L.tileLayer('./better tiles/{z}/{x}/{y}.png');
-      var rando = L.tileLayer('./tiles/{z}/{x}/{y}.png');
+      var OSM1 = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
+
+      var rando = L.tileLayer('./{z}/{x}/{y}.png', {}).addTo(map);
 
       var tiles = {
           "OSM":OSM,
-          "UNC": georef,
           "UNC2":rando
       }
       L.control.layers(tiles).addTo(map);
-        L.marker([35.9081,-79.05026]).addTo(map)
-            .bindPopup("UNC")
+        var LeafIcon = L.Icon.extend({
+            options: {
+                shadowUrl: 'leaf-shadow.png',
+                iconSize:     [38, 95],
+                shadowSize:   [50, 64],
+                iconAnchor:   [22, 94],
+                shadowAnchor: [4, 62],
+                popupAnchor:  [-3, -76]
+            }
+        });
+        var duckIcon = new LeafIcon({iconUrl:'1589704306946.jpg'});
+        L.marker([35.9081,-79.05026], {icon: duckIcon }).addTo(map)
+            .bindPopup("this is a duck benching")
             .openPopup();
     </script>
 </body>

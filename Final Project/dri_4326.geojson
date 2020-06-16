@@ -1,0 +1,8 @@
+var dri = {
+"type": "FeatureCollection",
+"name": "dri_4326",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 0 }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ -77.808909054815146, 34.221586665579238 ], [ -77.808038834539261, 34.219853834739219 ], [ -77.810178866034065, 34.220316415950947 ], [ -77.808909054815146, 34.221586665579238 ] ] ] ] } }
+]
+}
