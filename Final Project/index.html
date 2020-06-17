@@ -46,11 +46,39 @@
 
       var home_popup = "My house and the view. It just turned 90 this year!<br/><img src='IMG_3068.jpg' width='50%' height='50%'>";
         
-        L.marker([34.209877, -77.803003]).addTo(map)
+      var greenIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+        });
+
+        var orangeIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+        });
+
+        var goldIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+        });
+
+
+        L.marker([34.209877, -77.803003], {icon: greenIcon}).addTo(map)
             .bindPopup(home_popup);
-        L.marker([34.203478, -77.798893]).addTo(map)
+        L.marker([34.203478, -77.798893], {icon:goldIcon}).addTo(map)
             .bindPopup(br_popup);
-        L.marker([34.193512, -77.804786]).addTo(map)
+        L.marker([34.193512, -77.804786],{icon: orangeIcon}).addTo(map)
             .bindPopup("The Oceanic Pier");
 
         var dri_popup = "Diminishing Republic Island<br/><img src='MemDay2017_sat-19.jpg' width='150' height='100'>";
